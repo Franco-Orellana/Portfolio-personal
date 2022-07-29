@@ -1,0 +1,64 @@
+:root {
+    --color-fondo: #1d19ff;
+}
+
+@media only screen and (max-width: 978px) {
+
+    header > button,
+    .menu {
+        display: inline-block;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    header > p {
+        display: none;
+    }
+
+    /* Estilos para el ícono del Menú */
+    .menu{
+        position: relative;
+        z-index: 10;
+        width: 25px;
+        height: 25px;
+    }
+
+    .menu img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+        cursor: pointer;
+    }
+
+    /* Estilos para el contenedor del Menú */
+    .nav{
+        background-color: var(--color-fondo);
+        width: 100%;
+        height: 100vh;
+        padding: 130px 25px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .5s ease;
+    }
+
+    /* Estilos por agregar en JavaScript */
+    .active{
+        transform: translate(-100%);
+    }
+
+    /* Estilos para el listado del Menú */
+    .nav__lista{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav__lista > li::after {
+        background-color: transparent;
+    }
+
+    .enlace {
+        font-size: 30px;
+    }
+}
